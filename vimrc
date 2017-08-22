@@ -26,6 +26,11 @@ set hlsearch
 set list
 set listchars=tab:>-,trail:.,extends:>,precedes:<
 
+" indentation
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+
 set nowrap
 
 " disable arrow keys in normal mode
