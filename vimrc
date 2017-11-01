@@ -39,6 +39,11 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
+" copy to Mac OS X clipboard
+vnoremap <C-c> :w !pbcopy<CR><CR>
+" paste from Mac OS X clipboard
+noremap <C-v> :r !pbpaste<CR><CR>
+
 " automatically source the vimrc file on save
 augroup autosourcing
   autocmd!
