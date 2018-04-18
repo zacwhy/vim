@@ -14,7 +14,9 @@ Plugin 'VundleVim/Vundle.vim'
 
 
 " Plugins
-Plugin 'sonph/onehalf', {'rtp': 'vim/'}
+Plugin 'ctrlp.vim'
+Plugin 'joshdick/onedark.vim'
+" Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 Plugin 'tpope/vim-commentary'
 
 
