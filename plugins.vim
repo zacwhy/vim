@@ -12,12 +12,14 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+" Themes
+" Plugin 'joshdick/onedark.vim'
+" Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 
 " Plugins
-Plugin 'ctrlp.vim'
-Plugin 'joshdick/onedark.vim'
-" Plugin 'sonph/onehalf', {'rtp': 'vim/'}
-Plugin 'tpope/vim-commentary'
+" Plugin 'ctrlp.vim'
+" Plugin 'tpope/vim-commentary'
+" Plugin 'tpope/vim-fugitive'
 
 
 " All of your Plugins must be added before the following line
