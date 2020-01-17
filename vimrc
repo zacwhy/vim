@@ -1,41 +1,51 @@
-" ln -s /path/to/vim/vimrc ~/.vimrc
-
-execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-endif
-
-set rtp+=/usr/local/opt/fzf
-set path+=**
-
-" set t_Co=256
 set showcmd
+" set path+=**
+" set t_Co=256
 
+
+" status line {{{
+
+" show status line even on the last window
 set laststatus=2
 
-set statusline=%f         " Path to the file
-" set statusline+=%#LineNr#
-set statusline+=%{tagbar#currenttag('\ [%s]\ ','')}
-set statusline+=%=        " Switch to the right side
+" Path to the file
+set statusline=%f
+
+" Statusline color
+"set statusline+=%#LineNr#
+
+" Switch to the right side
+set statusline+=%=
+
 set statusline+=%y\ %l/%L\ 
 
+" }}}
+
+
 " highlight the screen line of the cursor
-set cursorline
+"set cursorline
+"set cursorcolumn
 
 " line number
 set number relativenumber
 
-" search
+
+" search settings {{{
+
 " case insensitive search
 set ignorecase
+
 " show matches while typing search command
 set incsearch
+
 " highlight all matches
 set hlsearch
+
+" }}}
+
 
 " display unprintable characters in insert mode
 set nolist listchars=tab:▸\ ,trail:.,extends:>,precedes:<
@@ -54,22 +64,28 @@ noremap <down> <nop>
 noremap <left> <nop>
 noremap <right> <nop>
 
-inoremap kj <esc>
-" inoremap <esc> <nop>
+inoremap jj <esc>
 
 nnoremap <leader>ev :edit $MYVIMRC<cr>
 
-" copy to Mac OS X clipboard
+
+" Mac OS {{{
+
+" copy to Mac OS clipboard
 vnoremap <leader>y :write !pbcopy<cr><cr>
 
-" paste from mac os x clipboard
+" paste from Mac OS clipboard
 nnoremap <leader>p :read !pbpaste<cr><cr>
 
-" automatically source the vimrc file on save
+" }}}
+
+
+" automatically source the vimrc file on save {{{
 augroup autosourcing
   autocmd!
   autocmd BufWritePost $MYVIMRC source %
 augroup END
+" }}}
 
 " Vimscript file settings {{{
 augroup filetype_vim
