@@ -1,3 +1,5 @@
+set nocompatible              " be iMproved
+
 syntax on
 filetype plugin indent on
 
@@ -48,7 +50,8 @@ set hlsearch
 
 
 " display unprintable characters in insert mode
-set nolist listchars=tab:▸\ ,trail:.,extends:>,precedes:<
+set list
+set listchars=tab:▸\ ,trail:.,extends:>,precedes:<
 set tabstop=4
 
 " indentation
